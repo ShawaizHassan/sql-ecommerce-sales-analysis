@@ -62,9 +62,6 @@ INNER JOIN products p
 ON j.product_id = p.product_id;
 
 -- Q10: Show total quantity ordered per product.
-SELECT * FROM orders;
-SELECT * FROM products;
-SELECT * FROM customers;
 
 SELECT product_name, sum(quantity) as total_ordered
 FROM orders o
@@ -73,9 +70,6 @@ ON o.product_id = p.product_id
 GROUP BY o.product_id; -- can be done as well: GROUP BY product_name;
 
 -- Q11: Find total sales per product.
-SELECT * FROM orders;
-SELECT * FROM products;
-SELECT * FROM customers;
 
 SELECT p.product_name, o.product_id, sum(o.quantity * p.price) AS sales
 FROM orders o
@@ -85,10 +79,6 @@ GROUP BY product_id;
 
 
 -- Q 12: Which customer placed the most orders?
-
-SELECT * FROM orders;
-SELECT * FROM products;
-SELECT * FROM customers;
 
 SELECT c.name, COUNT(o.order_id) AS total_orders
 FROM orders o
