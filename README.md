@@ -1,5 +1,3 @@
-# sql-ecommerce-sales-analysis
-
 # SQL E-Commerce Sales Analysis
 
 This project simulates a small e-commerce database and demonstrates how SQL can be used to analyze business data.
